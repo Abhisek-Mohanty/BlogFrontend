@@ -35,7 +35,7 @@ const Create = () => {
       article: des,
     };
     axios
-      .post("http://localhost:5000/publish", details)
+      .post("https://bb-yhoy.onrender.com/publish", details)
       .then(() => {
         console.log("success");
       })
