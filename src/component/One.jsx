@@ -9,7 +9,7 @@ const One = () => {
   let { abc } = useParams("");
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/${abc}`)
+      .get(`https://bb-yhoy.onrender.com/${abc}`)
       .then((response) => {
         console.log(response);
         setData(response.data);
