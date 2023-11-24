@@ -5,11 +5,12 @@ import "react-quill/dist/quill.snow.css";
 import { Box } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
+import { useNavigate } from "react-router-dom";
 const Create = () => {
   let [title, setTitle] = useState("");
   let [image, setImage] = useState("");
   let [des, setDes] = useState("");
+  let navi= useNavigate("");
 
   let titleChange = (e) => {
     e.preventDefault();
@@ -38,6 +39,7 @@ const Create = () => {
       .post("https://bb-yhoy.onrender.com/publish", details)
       .then(() => {
         console.log("success");
+        navi("/blog");
       })
       .catch(() => {
         console.log("error");
