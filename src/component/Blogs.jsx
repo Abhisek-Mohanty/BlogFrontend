@@ -11,7 +11,7 @@ const Blogs = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/blog")
+      .get("https://bb-yhoy.onrender.com/blog")
       .then((response) => {
         setBlog(response.data);
       })
